@@ -1,11 +1,14 @@
-﻿<Project>
+<Project>
+  <PropertyGroup>
+    <!-- Forces transitive dependencies to respect PackageVersion Update -->
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
   <Import Project="RobustToolbox/Directory.Packages.props" />
   <ItemGroup>
     <!--
     Remove EF Core packages from Robust. They're only used by Robust.Benchmarks anyways.
     -->
     <PackageVersion Update="SixLabors.ImageSharp" Version="3.2.0" />
-    <PackageReference Include="SixLabors.ImageSharp" />
     <PackageVersion Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageVersion Remove="Microsoft.EntityFrameworkCore.Design" />
     <PackageVersion Include="CsvHelper" Version="33.1.0" />
