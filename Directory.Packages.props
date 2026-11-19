@@ -1,8 +1,4 @@
 <Project>
-  <PropertyGroup>
-    <!-- Forces transitive dependencies to respect PackageVersion Update -->
-    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-  </PropertyGroup>
   <Import Project="RobustToolbox/Directory.Packages.props" />
   <ItemGroup>
     <!--
